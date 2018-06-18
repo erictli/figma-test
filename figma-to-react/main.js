@@ -139,9 +139,9 @@ async function main() {
       figma.createComponent(child, images, componentMap);
       nextSection += `export class Master${child.name.replace(/\W+/g, "")} extends PureComponent {\n`;
       nextSection += "  render() {\n";
-      nextSection += `    return <div className="master" style={{backgroundColor: "${figma.colorString(child.backgroundColor)}"}}>\n`;
+      nextSection += `    return <div><div className="header"><div className="logo"></div><p>Design System</p></div><div className="master" style={{backgroundColor: "${figma.colorString(child.backgroundColor)}"}}>\n`;
       nextSection += `      <C${child.name.replace(/\W+/g, "")} {...this.props} nodeId="${child.id}" />\n`;
-      nextSection += "    </div>\n";
+      nextSection += "    </div></div>\n";
       nextSection += "  }\n";
       nextSection += "}\n\n";
     }

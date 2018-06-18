@@ -153,7 +153,7 @@
     function apiRequest(endpoint) {
         return fetch('https://api.figma.com/v1' + endpoint, {
             method: 'GET',
-            headers: { "x-figma-token": PERSONAL_ACCESS_TOKEN }
+            headers: { "x-figma-token": "1761-7ca81f24-9152-4eb8-a33a-44b1e5f13a19" }
         }).then(function(response) {
             return response.json();
         }).catch(function (error) {
